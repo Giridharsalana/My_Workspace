@@ -6,3 +6,5 @@ vscode:
     - ms-azuretools.vscode-docker
     - Dart-Code.dart-code
     - usernamehw.errorlens
+    - ms-python.python
+    - rust-lang.rust
