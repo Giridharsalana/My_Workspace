@@ -1,3 +1,4 @@
+#!/bin/bash
 docker run -d \
   --name=webtop \
   -e PUID=1000 \
