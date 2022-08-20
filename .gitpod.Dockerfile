@@ -21,11 +21,3 @@ RUN echo "function c\n    clear\nend" > /home/$USER/.config/fish/config.fish
 ENV SHELL /usr/bin/fish
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 ENTRYPOINT [ "fish" ]
-
-
-
-
-
-
-
-ENV SHELL /usr/bin/fishgitpod$USER
