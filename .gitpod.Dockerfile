@@ -10,12 +10,7 @@ RUN sudo apt-add-repository ppa:fish-shell/release-3 -y && \
 	sudo apt update -y && \
 	sudo apt install fish -y 
 
-# Root User Creation
-RUN sudo useradd -rm -d /home/giri -s /usr/bin/fish -g root -G sudo -u 1001 giri
-USER giri
-ENV USER giri
-ENV HOME /home/$USER
-WORKDIR /home/$USER
+# Custom Setup Creation
 RUN mkdir -p /home/$USER/.config/fish/
 RUN echo "function c\n    clear\nend" > /home/$USER/.config/fish/config.fish
 ENV SHELL /usr/bin/fish
