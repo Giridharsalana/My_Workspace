@@ -1,4 +1,4 @@
-FROM giridharsalana/test:latest
+FROM giridharsalana/ubuntu-container:latest
 
 LABEL maintainer="giridharsalana@gmail.com"
 
