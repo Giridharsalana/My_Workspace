@@ -1,2 +1,12 @@
 image:
   file: .gitpod.Dockerfile
+
+
+tasks:
+  - name: Setup SSH
+    before: |
+      ssh-keyscan github.com >> "${HOME}/.ssh/known_hosts"
+      if [[ ! -z "${MY_SSH_KEY}" ]]; then
+        echo "${USER_SSH_KEY}" | base64 --decode > "${HOME}/.ssh/id_rsa"
+        chmod 0600 "${HOME}/.ssh/id_rsa"
+      fi
